@@ -1,0 +1,171 @@
+@import "../../styles/index.scss";
+
+footer {
+    background-color: var(--bg-purpul);
+    color: var(--color-white);
+    
+    .footer-div {
+        padding: 100px 0 60px 0;
+        display: grid;
+        grid-template-columns: 55% 1fr;
+        gap: 20px;
+        
+        @media (max-width: 1024px) {
+            padding: 60px 0;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .footer-div-sign {
+            max-width: 500px;
+
+            h2 {
+                @include font30Light;
+                margin-bottom: 15px;
+            }
+
+            form {
+                label {
+                    display: block;
+                    margin-bottom: 8px;
+                    @include font16;
+                }
+
+                input {
+                    width: 100%;
+                    padding: 10px;
+                    @include font16;
+                    border-radius: 0;
+                    border: 1px solid var(--color-white);
+                    color: var(--color-white);
+                    background-color: transparent;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                ::placeholder {
+                    color: var(--font-placeholder);
+                }
+
+                .checkbox-div {
+                    display: flex;
+                    align-items: center;
+                    gap: 7px;
+                    margin: 15px 0 30px 0;
+
+                    label {
+                        margin-bottom: 0;
+                    }
+
+                    .checkbox {
+                        input {
+                            position: absolute;
+                            margin: 0;
+                            width: 18px;
+                            height: 18px;
+                            cursor: pointer;
+                            opacity: 0;
+
+                            &:checked + span svg path {
+                                stroke-dashoffset: 0;
+                            }
+                        }
+
+                        input + span {
+                            display: block;
+                            border: 1px solid var(--color-white);
+                            width: 20px;
+                            height: 20px;
+                            cursor: pointer;
+                            transition: all 0.2s ease;
+
+                            &:active {
+                                transform: scale(1.05);
+                            }
+
+                            svg {
+                                pointer-events: none;
+                                padding: 10%;
+
+                                path {
+                                    fill: none;
+                                    stroke: var(--color-white);
+                                    stroke-width: 6px;
+                                    stroke-linecap: round;
+                                    stroke-linejoin: round;
+                                    stroke-dasharray: 100;
+                                    stroke-dashoffset: 101;
+                                    transition: all 250ms cubic-bezier(1, 0, 0.37, 0.91);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-div-links {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+
+            @media (max-width: 576px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-menu-links {
+                &:last-child {
+                    @media (max-width: 576px) {
+                        grid-column: span 2;
+                    }
+                }
+
+                h3 {
+                    @include font16;
+                    margin-bottom: 20px;
+                }
+
+                a {
+                    display: block;
+                    @include font14Light;
+                    margin-bottom: 10px;
+                    color: var(--color-white);
+
+                    span {
+                        position: relative;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 100%;
+                            transform-origin: right;
+                            border-bottom: 1px solid var(--color-white);
+                            transform: scaleX(0);
+                            transition: transform 0.3s ease-in-out;
+                        }
+                    }
+
+                    &:hover {
+                        span {
+                            &::after {
+                                transform-origin: left;
+                                transform: scaleX(1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright-div {
+        border-top: 1px solid var(--color-white);
+        padding: 15px 0;
+        text-align: center;
+        @include font14Light;
+    }
+}
