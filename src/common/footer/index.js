@@ -21,7 +21,7 @@ export default function Footer() {
                     </svg>
                   </span>
                 </div>
-                <label htmlFor="terms">I agree to the terms and conditions.</label>
+                <label htmlFor="check">I agree to the terms and conditions.</label>
               </div>
               <button>Subscribe</button>
             </form>

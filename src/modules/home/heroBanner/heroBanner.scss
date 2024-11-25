@@ -1,5 +1,66 @@
 @import "../../../styles/index.scss";
 
 .hero-banner {
-    
+    width: 100%;
+    position: relative;
+    padding: 200px 0 300px 0;
+
+    .hero-banner-video {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+
+    .hero-banner-content {
+        position: relative;
+        margin-bottom: 100px;
+
+        .modern-vision {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            .modern-vision-div {
+                max-width: 545px;
+
+                .modern-vision-div-title {
+                    padding: 40px;
+                    background-color: var(--bg-purpul);
+
+                    h1 {
+                        @include font50Light;
+                        text-transform: uppercase;
+                        color: var(--color-white);
+                    }
+                }
+
+                .modern-vision-div-date {
+                    padding: 40px;
+                    background-color: var(--color-white);
+
+                    h1 {
+                        @include font50Light;
+                        text-transform: uppercase;
+                        color: var(--font-purpul);
+                        margin-bottom: 20px;
+                    }
+
+                    p {
+                        @include font24;
+                        color: var(--font-black-light);
+                    }
+                }
+            }
+        }
+    }
 }

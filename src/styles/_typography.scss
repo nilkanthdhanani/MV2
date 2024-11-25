@@ -15,7 +15,7 @@
 @mixin font16 {
     font-size: 16px;
     font-weight: 400;
-    line-height: 20px;
+    line-height: 22px;
 }
 
 @mixin fontNav {
@@ -27,6 +27,12 @@
 @mixin font20 {
     font-size: 20px;
     font-weight: 400;
+}
+
+@mixin font24 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
 }
 
 @mixin fontLogo {
@@ -45,6 +51,30 @@
     font-size: 32px;
     font-weight: 600;
     line-height: 1.2;
+}
+
+@mixin font40Light {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 52px;
+}
+
+@mixin font50Light {
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 60px;
+}
+
+@mixin font60Light {
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 70px;
+}
+
+@mixin font90Light {
+    font-size: 90px;
+    font-weight: 400;
+    line-height: 120px;
 }
 
 @mixin font160 {

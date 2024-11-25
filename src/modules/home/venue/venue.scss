@@ -1,0 +1,56 @@
+@import "../../../styles/index.scss";
+
+.venue {
+    background: linear-gradient(180deg, #760fcb 0, #760fcb 75%, #ffffff 0, #ffffff);
+
+    .venue-div {
+        min-height: 750px;
+        background-image: url("../../../assets/images/webp/venueBg.webp");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        position: relative;
+
+        .venue-div-main {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 50px;
+
+            .venue-div-content {
+                color: var(--color-white);
+                max-width: 600px;
+
+                span {
+                    display: block;
+                    @include font24;
+                    margin-bottom: 10px;
+                    text-decoration-line: underline;
+                }
+
+                p {
+                    @include font16;
+                    line-height: 1.7;
+                }
+
+                .venue-div-title {
+                    margin: 40px 0;
+
+                    h2 {
+                        @include font40Light;
+                    }
+                }
+
+                .venue-div-button {
+                    display: flex;
+                    gap: 20px;
+                }
+            }
+        }
+    }
+}

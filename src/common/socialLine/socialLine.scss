@@ -17,8 +17,8 @@
     a {
         pointer-events: fill;
 
-        img {
-            max-width: 20px;
+        svg {
+            fill: var(--color-black);
         }
     }
 }

@@ -34,3 +34,21 @@
     background-position: 10000px 0;
   }
 }
+
+@keyframes colorChanger {
+  0% {
+      color: var(--font-gray);
+  }
+  25% {
+      color: var(--font-gray);
+  }
+  50% {
+      color: var(--font-gray);
+  }
+  75% {
+      color: var(--font-purpul);
+  }
+  100% {
+      color: var(--font-gray);
+  }
+}

@@ -1,22 +1,25 @@
 import React from 'react';
 import "./socialLine.scss";
 import { NavLink } from 'react-router-dom';
-import { facebook, instagram, twitter, youtube } from '../../assets/images/images';
+import InstagramIco from '../../assets/images/svg/instagram';
+import TwitterIco from '../../assets/images/svg/twitter';
+import FacebookIco from '../../assets/images/svg/facebook';
+import YoutubeIco from '../../assets/images/svg/youtube';
 
 export default function SocialLine() {
   return (
     <div className="social-line">
       <NavLink to={"https://www.instagram.com/"} target='_blank' aria-label='instagram'>
-        <img src={instagram} alt="instagram" />
+        <InstagramIco />
       </NavLink>
       <NavLink to={"https://x.com/"} target='_blank' aria-label='twitter'>
-        <img src={twitter} alt="twitter" />
+        <TwitterIco />
       </NavLink>
       <NavLink to={"https://www.facebook.com/"} target='_blank' aria-label='facebook'>
-        <img src={facebook} alt="facebook" />
+        <FacebookIco />
       </NavLink>
       <NavLink to={"https://www.youtube.com/"} target='_blank' aria-label='youtube'>
-        <img src={youtube} alt="youtube" />
+        <YoutubeIco />
       </NavLink>
     </div>
   )
