@@ -55,7 +55,7 @@ export default function Featured() {
                             </div>
                         </div>
                     </div>
-                    <div className="featured-div-button">
+                    <div className="featured-div-btn">
                         <button>See All Speakers</button>
                     </div>
                 </div>

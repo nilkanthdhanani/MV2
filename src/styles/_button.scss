@@ -25,7 +25,7 @@
     }
 }
 
-.get-ticket-button {
+.get-ticket-btn {
     button {
         padding: 20px 60px;
         background-color: var(--bg-purpul);
@@ -41,7 +41,29 @@
     }
 }
 
-.learn-inspired-detail-div, .featured-div-button, .venue-div-button {
+.submit-btn {
+    button {
+        padding: 10px 100px;
+        background-color: var(--bg-purpul);
+        color: var(--color-white);
+        border: 1px solid transparent;
+        @include font16;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        
+        &:hover {
+            background-color: var(--color-black);
+            border: 1px solid var(--color-white);
+        }
+
+        @media (max-width: 576px) {
+            padding: 10px;
+            width: 100%;
+        }
+    }
+}
+
+.learn-inspired-detail-div, .featured-div-btn, .venue-div-btn {
     button {
         padding: 10px 25px;
         border: 1px solid var(--color-white);
@@ -55,6 +77,14 @@
             border: 1px solid var(--color-black);
             background-color: var(--color-black);
             color: var(--color-white);
+        }
+    }
+}
+
+.featured-div-btn {
+    button {
+        @media (max-width: 1024px) {
+            background-color: var(--bg-purpul);
         }
     }
 }

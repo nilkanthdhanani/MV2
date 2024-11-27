@@ -10,13 +10,29 @@
     .learn-div {
         padding-bottom: 300px;
 
+        @media (max-width: 576px) {
+            padding-bottom: 200px;
+        }
+
         .learn-inspired {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
 
+            @media (max-width: 1024px) {
+                grid-template-columns: 1fr;
+            }
+
             .learn-inspired-detail {
                 position: relative;
-                
+
+                @media (max-width: 1024px) {
+                    margin-top: -200px;
+                }
+
+                @media (max-width: 576px) {
+                    margin-top: -100px;
+                }
+
                 .learn-inspired-detail-div {
                     position: absolute;
                     width: calc(100% + 100px);
@@ -25,8 +41,23 @@
                     color: var(--color-white);
                     top: -60%;
 
+                    @media (max-width: 1024px) {
+                        position: relative;
+                        top: 0;
+                        width: 100%;
+                    }
+
+                    @media (max-width: 576px) {
+                        padding: 20px;
+                    }
+
                     h2 {
                         @include font40Light;
+
+                        @media (max-width: 576px) {
+                            font-size: 30px;
+                            line-height: 40px;
+                        }
                     }
 
                     p {
@@ -34,6 +65,10 @@
                         @include font16;
                         line-height: 1.7em;
                         margin: 20px 0 45px 0;
+
+                        @media (max-width: 576px) {
+                            margin: 10px 0 30px 0;
+                        }
                     }
                 }
             }
@@ -42,8 +77,13 @@
                 position: relative;
                 max-height: 350px;
 
+                @media (max-width: 1024px) {
+                    max-height: none;
+                }
+
                 video {
                     width: 100%;
+                    height: 100%;
                     object-fit: cover;
                 }
             }
@@ -52,10 +92,18 @@
         .design-future {
             padding: 0 40px 50px 40px;
 
+            @media (max-width: 576px) {
+                padding: 0;
+            }
+
             p {
                 @include font24;
                 color: var(--font-purpul);
                 margin: 50px 0;
+
+                @media (max-width: 576px) {
+                    margin-bottom: 20px;
+                }
             }
 
             h3 {
@@ -64,11 +112,21 @@
                 color: var(--font-gray);
                 animation: colorChanger 6s linear infinite;
 
-                &:nth-child(2) {
-                    animation-delay: 2s;
+                @media (max-width: 768px) {
+                    font-size: 60px;
+                    line-height: 80px;
+                }
+
+                @media (max-width: 576px) {
+                    font-size: 36px;
+                    line-height: 56px;
                 }
 
                 &:nth-child(3) {
+                    animation-delay: 2s;
+                }
+
+                &:nth-child(4) {
                     animation-delay: 4s;
                 }
             }

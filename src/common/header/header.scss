@@ -8,6 +8,10 @@ header {
     margin-top: 50px;
     z-index: 9;
 
+    @media (max-width: 576px) {
+        margin-top: 30px;
+    }
+
     .header-div {
         padding-right: 40px;
         display: flex;
@@ -81,6 +85,32 @@ header {
                     }
                 }
             }
+
+            .social-lines {
+                display: none;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+                background-color: var(--bg-purpul);
+                max-height: 0;
+                overflow: hidden;
+                transition: all 0.5s ease-in-out;
+
+                &.open {
+                    max-height: 100vh;
+                    padding: 15px 0;
+                }
+
+                @media (max-width: 768px) {
+                    display: flex;
+                }
+
+                a {
+                    svg {
+                        fill: var(--color-white);
+                    }
+                }
+            }
         }
 
         .get-ticket {
@@ -146,8 +176,9 @@ header {
                     display: none;
 
                     &:checked ~ span:nth-of-type(1) {
+                        width: 100%;
                         transform-origin: bottom;
-                        transform: rotatez(45deg) translate(5px, 1px);
+                        transform: rotatez(45deg) translate(8px, 8px);
                     }
 
                     &:checked ~ span:nth-of-type(2) {
@@ -156,9 +187,7 @@ header {
                     }
 
                     &:checked ~ span:nth-of-type(3) {
-                        transform-origin: bottom;
-                        width: 50%;
-                        transform: translate(17px, -7px) rotatez(45deg);
+                        opacity: 0;
                     }
                 }
             }

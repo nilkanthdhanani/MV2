@@ -3,6 +3,12 @@
 .venue {
     background: linear-gradient(180deg, #760fcb 0, #760fcb 75%, #ffffff 0, #ffffff);
 
+    @media (max-width: 1024px) {
+        .container {
+            padding: 0;
+        }
+    }
+
     .venue-div {
         min-height: 750px;
         background-image: url("../../../assets/images/webp/venueBg.webp");
@@ -21,6 +27,10 @@
             align-items: flex-end;
             background-color: rgba(0, 0, 0, 0.6);
             padding: 50px;
+
+            @media (max-width: 576px) {
+                padding: 40px 20px;
+            }
 
             .venue-div-content {
                 color: var(--color-white);
@@ -41,12 +51,20 @@
                 .venue-div-title {
                     margin: 40px 0;
 
+                    @media (max-width: 576px) {
+                        margin: 30px 0;
+                    }
+
                     h2 {
                         @include font40Light;
+
+                        @media (max-width: 576px) {
+                            font-size: 30px;
+                        }
                     }
                 }
 
-                .venue-div-button {
+                .venue-div-btn {
                     display: flex;
                     gap: 20px;
                 }

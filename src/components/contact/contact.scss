@@ -1,0 +1,90 @@
+@import "../../styles/index.scss";
+
+.contact {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    max-height: 100vh;
+    width: 100%;
+    z-index: 999;
+    background-color: var(--color-black);
+    padding: 50px 0;
+    overflow: auto;
+
+    .contact-head {
+        display: grid;
+        grid-template-columns: auto 30px;
+        gap: 20px;
+        color: var(--color-white);
+        margin-bottom: 30px;
+
+        h2 {
+            @include font40Light;
+
+            @media (max-width: 576px) {
+                font-size: 30px;
+            }
+        }
+
+        .close {
+            display: flex;
+            align-items: center;
+
+            svg {
+                cursor: pointer;
+                fill: var(--color-white);
+                transition: 0.3s ease-in-out;
+
+                &:hover {
+                    fill: var(--border-purpul-light);
+                }
+            }
+        }
+    }
+
+    form {
+        .input-name-first {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+
+            @media (max-width: 768px) {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        .input-name {
+            margin-bottom: 20px;
+
+            label {
+                display: block;
+                @include font14Light;
+                margin-bottom: 5px;
+                color: var(--color-white);
+            }
+
+            input,
+            textarea {
+                width: 100%;
+                padding: 10px;
+                border: none;
+                background-color: transparent;
+                color: var(--color-white);
+                @include font16;
+                border-bottom: 1px solid var(--color-white);
+                transition: all 0.2s ease;
+                resize: none;
+
+                &:hover {
+                    border-bottom: 1px solid var(--border-purpul-light);
+                }
+
+                &:focus {
+                    outline: none;
+                    border-bottom: 1px solid var(--border-purpul-light);
+                }
+            }
+        }
+    }
+}

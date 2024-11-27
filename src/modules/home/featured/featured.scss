@@ -4,15 +4,27 @@
     background: linear-gradient(180deg, #ffffff 0, #ffffff 80%, #760fcb 0, #760fcb);
     padding-bottom: 100px;
 
+    @media (max-width: 1024px) {
+        background: var(--color-white);
+    }
+
     .featured-div {
         position: relative;
         margin-top: -200px;
+
+        @media (max-width: 576px) {
+            margin-top: -130px;
+        }
 
         span {
             display: block;
             @include font24;
             color: var(--font-purpul);
             margin: 0 0 50px 40px;
+
+            @media (max-width: 576px) {
+                margin: 0 0 30px 0;
+            }
         }
 
         .featured-grid {
@@ -20,8 +32,20 @@
             grid-template-columns: repeat(2, 1fr);
             margin-bottom: 60px;
 
+            @media (max-width: 1024px) {
+                grid-template-columns: 1fr;
+            }
+
             .featured-grid-div1 {
                 border: 1px solid var(--border-purpul);
+
+                @media (max-width: 1024px) {
+                    min-height: 500px;
+                }
+
+                @media (max-width: 576px) {
+                    min-height: 250px;
+                }
 
                 video {
                     display: block;
@@ -40,6 +64,15 @@
                 justify-content: center;
                 align-items: center;
 
+                @media (max-width: 1024px) {
+                    order: 3;
+                    padding: 120px 20px 50px 20px;
+                }
+
+                @media (max-width: 576px) {
+                    min-height: auto;
+                }
+
                 .featured-grid-content {
                     max-width: 320px;
 
@@ -48,17 +81,31 @@
                         color: var(--font-purpul);
                         text-transform: uppercase;
                         margin-bottom: 5px;
+
+                        @media (max-width: 576px) {
+                            font-size: 30px;
+                            line-height: 40px;
+                            text-align: center;
+                        }
                     }
 
                     p {
                         @include font20;
                         color: var(--font-black-light);
+
+                        @media (max-width: 576px) {
+                            text-align: center;
+                        }
                     }
                 }
             }
 
             .featured-grid-div3 {
                 position: relative;
+
+                @media (max-width: 1024px){
+                    order: 2;
+                }
 
                 .featured-grid-image {
                     position: absolute;
@@ -67,6 +114,11 @@
                     width: 100%;
                     display: flex;
                     justify-content: center;
+                    padding: 0 20px;
+
+                    @media (max-width: 1024px) {
+                        bottom: -100px;
+                    }
 
                     img {
                         width: 100%;
@@ -75,6 +127,11 @@
                         object-fit: cover;
                         filter: grayscale(1);
                         transition: filter 0.5s ease-in-out;
+
+                        @media (max-width: 576px) {
+                            max-width: 200px;
+                            max-height: 280px;
+                        }
                     }
                 }
             }
@@ -87,6 +144,15 @@
                 justify-content: center;
                 align-items: center;
 
+                @media (max-width: 1024px) {
+                    order: 4;
+                }
+
+                @media (max-width: 576px) {
+                    padding: 50px 20px;
+                    min-height: auto;
+                }
+
                 .featured-grid-nav {
                     max-width: 310px;
 
@@ -96,11 +162,19 @@
                         color: var(--color-white);
                         text-decoration-line: underline;
                         margin-bottom: 10px;
+
+                        @media (max-width: 576px) {
+                            text-align: center;
+                        }
                     }
 
                     p {
                         @include font16;
                         color: var(--color-white);
+
+                        @media (max-width: 576px) {
+                            text-align: center;
+                        }
                     }
                 }
             }
@@ -116,7 +190,7 @@
             }
         }
 
-        .featured-div-button {
+        .featured-div-btn {
             display: flex;
             justify-content: center;
         }

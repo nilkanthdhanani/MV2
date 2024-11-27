@@ -5,6 +5,10 @@
     position: relative;
     padding: 200px 0 300px 0;
 
+    @media (max-width: 576px) {
+        padding: 150px 0 100px 0;
+    }
+
     .hero-banner-video {
         position: fixed;
         width: 100%;
@@ -33,14 +37,27 @@
             .modern-vision-div {
                 max-width: 545px;
 
+                @media (max-width: 576px) {
+                    max-width: 400px;
+                }
+
                 .modern-vision-div-title {
                     padding: 40px;
                     background-color: var(--bg-purpul);
+
+                    @media (max-width: 576px) {
+                        padding: 20px;
+                    }
 
                     h1 {
                         @include font50Light;
                         text-transform: uppercase;
                         color: var(--color-white);
+
+                        @media (max-width: 576px) {
+                            font-size: 32px;
+                            line-height: 50px;
+                        }
                     }
                 }
 
@@ -48,16 +65,31 @@
                     padding: 40px;
                     background-color: var(--color-white);
 
+                    @media (max-width: 576px) {
+                        padding: 20px;
+                    }
+
                     h1 {
                         @include font50Light;
                         text-transform: uppercase;
                         color: var(--font-purpul);
                         margin-bottom: 20px;
+
+                        @media (max-width: 576px) {
+                            font-size: 32px;
+                            line-height: 50px;
+                            margin-bottom: 10px;
+                        }
                     }
 
                     p {
                         @include font24;
                         color: var(--font-black-light);
+
+                        @media (max-width: 576px) {
+                            font-size: 18px;
+                            line-height: 26px;
+                        }
                     }
                 }
             }

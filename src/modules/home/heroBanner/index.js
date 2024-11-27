@@ -22,7 +22,7 @@ export default function HeroBanner() {
                                 <p>San Francisco</p>
                             </div>
                         </div>
-                        <div className="get-ticket-button">
+                        <div className="get-ticket-btn">
                             <button>Get Tickets</button>
                         </div>
                     </div>

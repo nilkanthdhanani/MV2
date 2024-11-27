@@ -14,7 +14,7 @@ export default function Venue() {
                                 <p>500 Terry Francine Street</p>
                                 <h2>San Fransisco</h2>
                             </div>
-                            <div className="venue-div-button">
+                            <div className="venue-div-btn">
                                 <button type="button">Get Tickets</button>
                                 <button type="button">See Map</button>
                             </div>
