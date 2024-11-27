@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "../modules/home";
 import DefaultLayout from "./defaultLayout";
 import Error from "../error";
+import Agenda from "../modules/agenda";
 
 const router = createBrowserRouter([
     {
@@ -11,6 +12,10 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home />
+            },
+            {
+                path: "/agenda",
+                element: <Agenda />
             },
         ]
     },

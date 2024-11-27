@@ -1,0 +1,183 @@
+@import "../../../styles/index.scss";
+
+.agenda-step {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (max-width: 1024px) {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .agenda-step1 {
+        padding: 50px 20px;
+        background-color: var(--bg-purpul);
+        border: 1px solid var(--border-purpul);
+        display: flex;
+        justify-content: center;
+
+        @media (max-width: 576px) {
+            padding: 30px 20px;
+        }
+
+        .agenda-step1-content {
+            max-width: 390px;
+
+            h2 {
+                @include font40Light;
+                color: var(--color-white);
+                margin-bottom: 15px;
+
+                @media (max-width: 576px) {
+                    font-size: 30px;
+                    line-height: 40px;
+                }
+            }
+
+            p {
+                @include fontNav;
+                color: var(--color-white);
+            }
+        }
+    }
+
+    .agenda-step2 {
+        padding: 50px 20px;
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(3px);
+        border: 1px solid var(--border-purpul);
+        display: flex;
+        justify-content: center;
+
+        @media (max-width: 576px) {
+            padding: 30px 20px;
+        }
+
+        .agenda-step2-content {
+            max-width: 350px;
+
+            .agenda-day-div {
+                display: grid;
+                grid-template-columns: 250px 100px;
+                border: 1px solid var(--border-purpul);
+                background-color: var(--color-white);
+
+                @media (max-width: 576px) {
+                    grid-template-columns: 1fr 70px;
+                }
+
+                .agenda-day-title {
+                    padding: 10px 20px 10px 50px;
+                    border-right: 1px solid var(--border-purpul);
+
+                    @media (max-width: 576px) {
+                        padding: 10px 20px 10px 30px;
+                    }
+
+                    h3 {
+                        @include font30Light;
+                        color: var(--font-purpul);
+
+                        @media (max-width: 576px) {
+                            font-size: 20px;
+                            line-height: 30px;
+                        }
+                    }
+                }
+
+                .agenda-day-date {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    span {
+                        @include font16;
+                        font-weight: 700;
+                        color: var(--font-black-light);
+                    }
+                }
+            }
+
+            .agenda-day-list {
+                padding-left: 50px;
+
+                @media (max-width: 576px) {
+                    padding-left: 30px;
+                }
+
+                .agenda-day-list1 {
+                    min-height: 80px;
+                    border-left: 1px solid var(--bg-purpul);
+
+                    @media (max-width: 576px) {
+                        min-height: 50px;
+                    }
+                }
+
+                .agenda-day-list2 {
+                    padding-bottom: 40px;
+                    padding-left: 50px;
+                    border-left: 1px solid var(--bg-purpul);
+                    position: relative;
+
+                    @media (max-width: 576px) {
+                        padding-left: 30px;
+                        min-height: 50px;
+                    }
+
+                    &:last-child {
+                        border-left: 1px solid transparent;
+                        padding-bottom: 0;
+
+                        &::after {
+                            position: absolute;
+                            content: "";
+                            top: -3px;
+                            left: 0;
+                            height: 15px;
+                            border-left: 1px solid var(--border-purpul);
+                            transform: translateX(-100%);
+                        }
+                    }
+
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        top: 8px;
+                        left: -8px;
+                        width: 16px;
+                        height: 16px;
+                        border-radius: 50%;
+                        background-color: var(--bg-purpul);
+                    }
+
+                    h4 {
+                        @include font24;
+                        color: var(--bg-purpul);
+                        font-family: var(--font-family-open);
+                    }
+
+                    span {
+                        display: block;
+                        @include font16;
+                        font-weight: 600;
+                        color: var(--font-black-light);
+                        margin: 7px 0 15px 0;
+                    }
+
+                    p,
+                    a {
+                        @include font16;
+                        color: var(--font-black-light);
+                        margin-top: 7px;
+                    }
+
+                    a {
+                        text-decoration-line: underline;
+                    }
+                }
+            }
+        }
+    }
+}

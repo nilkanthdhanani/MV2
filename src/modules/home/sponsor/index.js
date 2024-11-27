@@ -16,6 +16,7 @@ export default function Sponsore() {
         speed: 2000,
         autoplaySpeed: 3000,
         pauseOnHover: false,
+        draggable: false,
         responsive: [
             {
                 breakpoint: 1024,

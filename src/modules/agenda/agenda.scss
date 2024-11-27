@@ -1,0 +1,12 @@
+
+.agenda {
+    padding: 200px 0 100px 0;
+    background-image: url("../../assets/images/webp/learnBg.webp");
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+
+    @media (max-width: 576px) {
+        padding: 150px 0 100px 0;
+    }
+}

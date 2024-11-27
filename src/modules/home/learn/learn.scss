@@ -36,12 +36,13 @@
                 .learn-inspired-detail-div {
                     position: absolute;
                     width: calc(100% + 100px);
-                    padding: 40px;
+                    padding: 40px 100px 40px 40px;
                     background-color: var(--bg-purpul);
                     color: var(--color-white);
-                    top: -60%;
+                    top: -250px;
 
                     @media (max-width: 1024px) {
+                        padding: 40px;
                         position: relative;
                         top: 0;
                         width: 100%;
