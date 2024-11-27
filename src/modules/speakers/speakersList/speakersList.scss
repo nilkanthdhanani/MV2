@@ -1,0 +1,166 @@
+@import "../../../styles/index.scss";
+
+.speakers-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 1px solid var(--border-purpul);
+
+    @media (max-width: 1024px) {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    &:nth-child(2n + 2) {
+        .speakers-div-video {
+            order: 2;
+        }
+
+        .speakers-div {
+            border-right: 1px solid var(--border-purpul);
+        }
+
+        @media (max-width: 1024px) {
+            .speakers-div-video {
+                order: unset;
+            }
+
+            .speakers-div {
+                border-right: 1px solid transparent;
+                border-top: 1px solid var(--border-purpul);
+            }
+        }
+    }
+
+    &:nth-child(2n + 1) {
+        .speakers-div {
+            border-left: 1px solid var(--border-purpul);
+        }
+
+        @media (max-width: 1024px) {
+            .speakers-div {
+                border-left: 1px solid transparent;
+                border-top: 1px solid var(--border-purpul);
+            }
+        }
+    }
+
+    .speakers-div-video {
+        @media (max-width: 1024px) {
+            min-height: 400px;
+        }
+
+        @media (max-width: 576px) {
+            min-height: 250px;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .speakers-div {
+        padding: 50px 20px;
+        background-color: var(--color-white);
+
+        .speakers-div-main {
+            max-width: 400px;
+            margin: 0 auto;
+
+            @media (max-width: 576px) {
+                max-width: 300px;
+            }
+
+            .speakers-div-image {
+                position: relative;
+                min-height: 180px;
+                margin-bottom: 40px;
+
+                img {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    max-height: 550px;
+                    object-fit: cover;
+                    z-index: 2;
+                    filter: grayscale(1);
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+
+            .speakers-div-content {
+                padding: 0 30px;
+
+                @media (max-width: 576px) {
+                    padding: 0;
+                }
+
+                .speakers-div-title {
+                    h2 {
+                        margin-bottom: 10px;
+                        @include font60Light;
+                        color: var(--font-purpul);
+                        text-transform: uppercase;
+
+                        @media (max-width: 576px) {
+                            font-size: 30px;
+                            line-height: 40px;
+                        }
+                    }
+
+                    p {
+                        @include font20;
+                        color: var(--font-black-light);
+                    }
+                }
+
+                .speakers-div-description {
+                    margin: 30px 0;
+
+                    a {
+                        @include font24;
+                        color: var(--color-black-light);
+                        text-decoration-line: underline;
+                    }
+
+                    p {
+                        @include fontNav;
+                        color: var(--font-black-light);
+                        margin-top: 10px;
+                    }
+                }
+
+                .speakers-div-nav {
+                    display: flex;
+                    justify-content: space-between;
+
+                    a {
+                        @include fontNav;
+                        text-decoration-line: underline;
+                        color: var(--font-black-light);
+                    }
+
+                    .media-link {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        svg {
+                            fill: var(--font-black-light);
+                        }
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            .speakers-div-image {
+                img {
+                    filter: grayscale(0);
+                }
+            }
+        }
+    }
+}

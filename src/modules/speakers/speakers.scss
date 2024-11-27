@@ -1,0 +1,43 @@
+@import "../../styles/index.scss";
+
+.speakers {
+    padding: 200px 0 100px 0;
+    background-image: url("../../assets/images/webp/learnBg.webp");
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+
+    @media (max-width: 576px) {
+        padding: 150px 0 100px 0;
+    }
+
+    .speakers-head {
+        padding: 60px 20px;
+        background-color: var(--bg-purpul);
+        max-width: 600px;
+        margin-bottom: 150px;
+
+        @media (max-width: 1024px) {
+            padding: 40px 20px;
+            margin-bottom: 100px;
+            max-width: 400px;
+        }
+
+        @media (max-width: 576px) {
+            padding: 20px;
+            margin-bottom: 60px;
+            max-width: 300px;
+        }
+
+        h2 {
+            text-align: center;
+            @include font40Light;
+            color: var(--color-white);
+
+            @media (max-width: 576px) {
+                font-size: 30px;
+                line-height: 40px;
+            }
+        }
+    }
+}
