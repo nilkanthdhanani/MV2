@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import "./speakersList.scss";
 
 import profileBg from '../../../assets/videos/profileBg.mp4';
 import { speaker1, speaker2, speaker3, speaker4, speaker5, speaker6, speaker7, speaker8 } from '../../../assets/images/images';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import FacebookIco from '../../../assets/images/svg/facebook';
 import InstagramIco from '../../../assets/images/svg/instagram';
 import TwitterIco from '../../../assets/images/svg/twitter';
 
 const speakers = [
     {
-        id: 1,
+        id: "corbin",
         name: "Corbin Donnelly",
         title: "Creative Director, Leap",
         topic: "Design in the Virtual World",
@@ -18,7 +18,7 @@ const speakers = [
         image: speaker1,
     },
     {
-        id: 2,
+        id: "vanessa",
         name: "Vanessa Carson",
         title: "Design Lead, Topia Technologies",
         topic: "New Era of Design",
@@ -26,7 +26,7 @@ const speakers = [
         image: speaker2,
     },
     {
-        id: 3,
+        id: "kya",
         name: "Kya Rawlings",
         title: "Head of Product Design, Ways",
         topic: "Digital Times",
@@ -34,7 +34,7 @@ const speakers = [
         image: speaker3,
     },
     {
-        id: 4,
+        id: "erin",
         name: "Erin Wells",
         title: "Designer & Creative Director, Bowl",
         topic: "AR & VR Shake Up Reality",
@@ -42,7 +42,7 @@ const speakers = [
         image: speaker4,
     },
     {
-        id: 5,
+        id: "joan",
         name: "Joan Mcgwan",
         title: "CEO, Starquake",
         topic: "Creative Confidence",
@@ -50,7 +50,7 @@ const speakers = [
         image: speaker5,
     },
     {
-        id: 6,
+        id: "oliver",
         name: "Oliver Bisset",
         title: "Creative Director, Sharkz",
         topic: "Mind Tricks",
@@ -58,7 +58,7 @@ const speakers = [
         image: speaker6,
     },
     {
-        id: 7,
+        id: "arya",
         name: "Arya Meza",
         title: "Digital Art Director, Paper",
         topic: "Magic Touch",
@@ -66,7 +66,7 @@ const speakers = [
         image: speaker7,
     },
     {
-        id: 8,
+        id: "tri",
         name: "Tri Tmms",
         title: "CTO, Alligator Studio",
         topic: "VR Booster Creative",
@@ -76,10 +76,22 @@ const speakers = [
 ];
 
 export default function SpeakersList() {
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.hash) {
+            const id = location.hash.replace("#", "");
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    }, [location]);
+
     return (
         <section>
-            {speakers.map((speaker) => (
-                <div className="speakers-list" key={speaker.id}>
+            {speakers.map((speaker, index) => (
+                <div className="speakers-list" key={index} id={speaker.id}>
                     <div className="speakers-div-video">
                         <video src={profileBg} autoPlay loop muted></video>
                     </div>

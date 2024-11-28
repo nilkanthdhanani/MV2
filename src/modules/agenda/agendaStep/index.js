@@ -6,50 +6,49 @@ const day2steps = [
     {
         title: "Breakfast",
         time: "9:30am",
-        link: "",
-        discription: "",
     },
     {
         title: "New Era of Design",
         time: "10am - 11am",
         link: "Vanessa Carson",
+        linkurl: "/speakers#vanessa",
         discription: "Design Lead, Topia Technologies",
     },
     {
         title: "Digital Times",
         time: "11am - 12pm",
         link: "Kya Rawlings",
+        linkurl: "/speakers#kya",
         discription: "Head of Product Design, Ways",
     },
     {
         title: "Lunch Time",
         time: "12pm - 1pm",
-        link: "",
-        discription: "",
     },
     {
         title: "Creative Confidence",
         time: "1pm - 2pm",
         link: "Joan McGowan",
+        linkurl: "/speakers#joan",
         discription: "CEO, Starquake",
     },
     {
         title: "Mind Tricks",
         time: "2pm - 3pm",
-        link: "Olivier Bisset",
+        link: "Oliver Bisset",
+        linkurl: "/speakers#oliver",
         discription: "Creative Director, Sharkz",
     },
     {
         title: "AR & VR Shake up Reality",
         time: "3pm - 4pm",
         link: "Erin Wells",
+        linkurl: "/speakers#erin",
         discription: "Designer & Creative Director, Bowl",
     },
     {
         title: "Drinks & Networking",
         time: "7pm - 10pm",
-        link: "",
-        discription: "",
     },
 ]
 
@@ -58,31 +57,30 @@ const day3steps = [
         title: "Design in the Virtual World",
         time: "10am - 11am",
         link: "Corbin Donnelly",
+        linkurl: "/speakers#corbin",
         discription: "Creative Director, Leap",
     },
     {
         title: "Magic Touch",
         time: "11am - 12pm",
         link: "Arya Meza",
+        linkurl: "/speakers#arya",
         discription: "Digital Art Director, Paper",
     },
     {
         title: "Lunch Time",
         time: "12pm - 1pm",
-        link: "",
-        discription: "",
     },
     {
         title: "VR Booster creative",
         time: "1pm - 2pm",
         link: "Tri Tmms",
+        linkurl: "/speakers#tri",
         discription: "Digital Art Director, Paper",
     },
     {
         title: "Closing Party",
         time: "7pm - 10pm",
-        link: "",
-        discription: "",
     },
 ]
 
@@ -136,7 +134,9 @@ export default function AgendaStep() {
                                     <div className="agenda-day-list2" key={index}>
                                         <h4>{name.title}</h4>
                                         <span>{name.time}</span>
-                                        <NavLink>{name.link}</NavLink>
+                                        {name.link && name.linkurl && (
+                                            <NavLink to={name.linkurl}>{name.link}</NavLink>
+                                        )}
                                         <p>{name.discription}</p>
                                     </div>
                                 ))}
@@ -160,7 +160,9 @@ export default function AgendaStep() {
                                     <div className="agenda-day-list2" key={index}>
                                         <h4>{name.title}</h4>
                                         <span>{name.time}</span>
-                                        <NavLink>{name.link}</NavLink>
+                                        {name.link && name.linkurl && (
+                                            <NavLink to={name.linkurl}>{name.link}</NavLink>
+                                        )}
                                         <p>{name.discription}</p>
                                     </div>
                                 ))}

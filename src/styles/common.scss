@@ -4,6 +4,10 @@
     font-family: var(--font-family-open);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
