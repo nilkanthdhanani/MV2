@@ -88,3 +88,39 @@
         }
     }
 }
+
+.see-map-btn, .tickets-div1-content {
+    button {
+        padding: 10px 25px;
+        border: 1px solid var(--bg-purpul);
+        background-color: var(--bg-purpul);
+        color: var(--color-white);
+        @include font16;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            border: 1px solid var(--color-black);
+            background-color: var(--color-black);
+            color: var(--color-white);
+        }
+    }
+}
+
+.tickets-div2-content {
+    button {
+        padding: 10px 25px;
+        border: 1px solid var(--color-white);
+        background-color: var(--bg-purpul);
+        color: var(--color-white);
+        @include font16;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            border: 1px solid var(--color-black);
+            background-color: var(--color-black);
+            color: var(--color-white);
+        }
+    }
+}

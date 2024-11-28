@@ -4,6 +4,7 @@ import DefaultLayout from "./defaultLayout";
 import Error from "../error";
 import Agenda from "../modules/agenda";
 import Speakers from "../modules/speakers";
+import Info from "../modules/info";
 
 const router = createBrowserRouter([
     {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
             {
                 path: "/speakers",
                 element: <Speakers />
+            },
+            {
+                path: "/info",
+                element: <Info />
             },
         ]
     },

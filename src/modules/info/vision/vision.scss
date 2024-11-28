@@ -1,0 +1,143 @@
+@import "../../../styles/index.scss";
+
+.vision {
+    padding-top: 200px;
+    background-image: url("../../../assets/images/webp/learnBg.webp");
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+
+    @media (max-width: 576px) {
+        padding: 150px 0 60px 0;
+    }
+
+    .vision-div {
+        display: grid;
+        grid-template-columns: 60% 1fr;
+
+        @media (max-width: 1024px) {
+            grid-template-columns: 1fr;
+        }
+
+        .vision-div-content {
+            padding: 70px 20px 240px 20px;
+            background-color: var(--bg-purpul);
+            display: flex;
+            justify-content: center;
+
+            @media (max-width: 1024px) {
+                padding: 50px 20px;
+                max-width: 600px;
+            }
+
+            @media (max-width: 576px) {
+                padding: 30px 20px;
+            }
+
+            .vision-div-title {
+                max-width: 500px;
+
+                h2 {
+                    @include font40Light;
+                    color: var(--color-white);
+
+                    @media (max-width: 576px) {
+                        font-size: 30px;
+                        line-height: 40px;
+                    }
+                }
+
+                p {
+                    @include fontNav;
+                    color: var(--color-white);
+                    margin-top: 15px;
+                }
+            }
+        }
+
+        .vision-div2-content {
+            padding: 70px 20px 240px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @media (max-width: 1024px) {
+                padding: 50px 20px 150px 20px;
+                align-items: flex-end;
+            }
+
+            @media (max-width: 576px) {
+                padding: 30px 0;
+            }
+
+            .vision-div2-div {
+                max-width: 350px;
+
+                .vision-div2-add {
+                    padding: 30px 20px;
+                    border: 1px solid var(--border-purpul);
+
+                    h3 {
+                        @include font24;
+                        color: var(--font-purpul);
+                        font-family: var(--font-family-open);
+                        padding-bottom: 20px;
+                        border-bottom: 1px solid var(--border-purpul);
+                    }
+
+                    a {
+                        display: block;
+                        margin-top: 20px;
+                        @include font16;
+                        font-weight: 600;
+                        text-decoration-line: underline;
+                        color: var(--font-black-light);
+                    }
+
+                    p {
+                        @include fontNav;
+                        color: var(--font-black-light);
+                        margin-top: 5px;
+                    }
+                }
+
+                .see-map-btn {
+                    display: flex;
+                    justify-content: flex-end;
+                }
+            }
+        }
+    }
+
+    .visio-img {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        min-height: 130px;
+
+        img {
+            position: absolute;
+            top: -200px;
+            max-width: 85%;
+            max-height: 430px;
+            object-fit: cover;
+            filter: grayscale(1);
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                filter: grayscale(0);
+            }
+
+            @media (max-width: 1024px) {
+                top: -120px;
+                min-height: 330px;
+            }
+
+            @media (max-width: 576px) {
+                position: relative;
+                top: 0;
+                max-width: 100%;
+            }
+        }
+    }
+}

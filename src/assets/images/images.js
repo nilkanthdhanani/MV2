@@ -13,7 +13,10 @@ import sponsor2 from "./webp/sponsor2.webp"
 import sponsor3 from "./webp/sponsor3.webp"
 import sponsor4 from "./webp/sponsor4.webp"
 import sponsor5 from "./webp/sponsor5.webp"
+import infoImg1 from "./webp/infoImg1.webp"
+import infoImg2 from "./webp/infoImg2.webp"
+import infoImg3 from "./webp/infoImg3.webp"
 
 export {
-    learnBg, speaker1, speaker2, sponsor1, sponsor2, speaker3, speaker4, speaker5, speaker6, speaker7, speaker8, sponsor3, sponsor4, sponsor5,
+    learnBg, speaker1, speaker2, sponsor1, sponsor2, speaker3, speaker4, speaker5, speaker6, speaker7, speaker8, sponsor3, sponsor4, sponsor5, infoImg1, infoImg2, infoImg3
 }

@@ -1,0 +1,99 @@
+@import "../../../styles/index.scss";
+
+.tickets {
+    background: linear-gradient(180deg, #ffffff 0, #ffffff 60%, #760fcb 0, #760fcb);
+
+    @media (max-width: 1024px) {
+        background: var(--color-white);
+        padding-bottom: 100px;
+    }
+
+    @media (max-width: 576px) {
+        padding-bottom: 60px;
+    }
+
+    .tickets-div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        @media (max-width: 1024px) {
+            grid-template-columns: 1fr;
+        }
+
+        .tickets-div1 {
+            padding: 150px 20px;
+            border: 1px solid var(--border-purpul);
+            background-color: var(--color-white);
+            display: flex;
+            justify-content: center;
+
+            @media (max-width: 1024px) {
+                padding: 50px 20px;
+            }
+
+            .tickets-div1-content {
+                max-width: 350px;
+
+                h2 {
+                    text-transform: uppercase;
+                    @include font60Light;
+                    color: var(--font-purpul);
+
+                    @media (max-width: 576px) {
+                        font-size: 30px;
+                        line-height: 40px;
+                    }
+                }
+
+                p {
+                    @include fontNav;
+                    color: var(--font-black-light);
+                    margin: 15px 0 20px 0;
+                }
+            }
+        }
+
+        .tickets-div2 {
+            padding: 150px 20px;
+            background-color: var(--border-purpul);
+            display: flex;
+            justify-content: center;
+
+            @media (max-width: 1024px) {
+                padding: 50px 20px;
+            }
+
+            .tickets-div2-content {
+                max-width: 350px;
+
+                h2 {
+                    text-transform: uppercase;
+                    @include font60Light;
+                    color: var(--color-white);
+
+                    @media (max-width: 576px) {
+                        font-size: 30px;
+                        line-height: 40px;
+                    }
+                }
+
+                p {
+                    @include fontNav;
+                    color: var(--color-white);
+                    margin: 15px 0 20px 0;
+                }
+            }
+        }
+    }
+
+    .dicount-bar {
+        padding: 10px 20px;
+        background-color: var(--color-black);
+        
+        p {
+            text-align: center;
+            color: var(--color-white);
+            @include font14;
+        }
+    }
+}
