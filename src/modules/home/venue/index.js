@@ -1,5 +1,6 @@
 import React from 'react';
 import "./venue.scss";
+import { NavLink } from 'react-router-dom';
 
 export default function Venue() {
     return (
@@ -15,8 +16,12 @@ export default function Venue() {
                                 <h2>San Fransisco</h2>
                             </div>
                             <div className="venue-div-btn">
-                                <button type="button">Get Tickets</button>
-                                <button type="button">See Map</button>
+                                <NavLink to={"/info"}>
+                                    <button type="button">Get Tickets</button>
+                                </NavLink>
+                                <NavLink to={"/location"}>
+                                    <button type="button">See Map</button>
+                                </NavLink>
                             </div>
                         </div>
                     </div>

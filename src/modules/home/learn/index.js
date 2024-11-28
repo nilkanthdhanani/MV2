@@ -2,6 +2,7 @@ import React from 'react';
 import "./learn.scss";
 
 import learnVideo from '../../../assets/videos/learnVideo.mp4';
+import { NavLink } from 'react-router-dom';
 
 export default function Learn() {
     return (
@@ -13,7 +14,9 @@ export default function Learn() {
                             <div className="learn-inspired-detail-div">
                                 <h2>Learn & Get Inspired</h2>
                                 <p>Discover a platform where creativity meets innovation. Learn from industry leaders, explore groundbreaking ideas, and ignite your passion for modern design. Get inspired to transform visions into impactful realities.</p>
-                                <button type="button">Learn More</button>
+                                <NavLink to={'/agenda'}>
+                                    <button type="button">Learn More</button>
+                                </NavLink>
                             </div>
                         </div>
                         <div className="learn-inspired-video">

@@ -25,7 +25,9 @@ export default function Vision() {
                                 <p>Hop on the 22-Fillmore and get off at the Mission Bay Station. Our building is right across the street.</p>
                             </div>
                             <div className="see-map-btn">
-                                <button type="button">See Map</button>
+                                <NavLink to={'/location'}>
+                                    <button type="button">See Map</button>
+                                </NavLink>
                             </div>
                         </div>
                     </div>

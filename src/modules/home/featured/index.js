@@ -28,7 +28,7 @@ export default function Featured() {
                         </div>
                         <div className="featured-grid-div4">
                             <div className="featured-grid-nav">
-                                <NavLink>Design in the Virtual World</NavLink>
+                                <NavLink to={"/speakers#corbin"}>Design in the Virtual World</NavLink>
                                 <p>Expert in crafting impactful visuals, they lead projects with passion, delivering exceptional designs that captivate audiences.</p>
                             </div>
                         </div>
@@ -45,7 +45,7 @@ export default function Featured() {
                         </div>
                         <div className="featured-grid-div4">
                             <div className="featured-grid-nav">
-                                <NavLink>New Era of Design</NavLink>
+                                <NavLink to={"/speakers#vanessa"}>New Era of Design</NavLink>
                                 <p>With innovative strategies and visionary ideas, they revolutionize modern design, inspiring creativity across industries.</p>
                             </div>
                         </div>
@@ -56,7 +56,9 @@ export default function Featured() {
                         </div>
                     </div>
                     <div className="featured-div-btn">
-                        <button>See All Speakers</button>
+                        <NavLink to={"/speakers"}>
+                            <button>See All Speakers</button>
+                        </NavLink>
                     </div>
                 </div>
             </div>

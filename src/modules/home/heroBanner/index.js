@@ -2,6 +2,7 @@ import React from 'react';
 import "./heroBanner.scss"
 
 import heroVideo from "../../../assets/videos/heroVideo.mp4";
+import { NavLink } from 'react-router-dom';
 
 export default function HeroBanner() {
     return (
@@ -23,7 +24,9 @@ export default function HeroBanner() {
                             </div>
                         </div>
                         <div className="get-ticket-btn">
-                            <button>Get Tickets</button>
+                            <NavLink to={"/info"}>
+                                <button>Get Tickets</button>
+                            </NavLink>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import './tickets.scss'
+import { NavLink } from 'react-router-dom';
 
 export default function Tickets() {
     return (
@@ -10,14 +11,18 @@ export default function Tickets() {
                         <div className="tickets-div1-content">
                             <h2>Early Bird Tickets</h2>
                             <p>Grab discounted tickets early and secure your spot at the Modern Vision Design Conference.</p>
-                            <button type="button">Buy Tickets</button>
+                            <NavLink to={"/buy-ticket"}>
+                                <button type="button">Buy Tickets</button>
+                            </NavLink>
                         </div>
                     </div>
                     <div className="tickets-div2">
                         <div className="tickets-div2-content">
                             <h2>Full Price Tickets</h2>
                             <p>Experience the full event access and join the excitement conference ticket rate.</p>
-                            <button type="button">Buy Tickets</button>
+                            <NavLink to={"/buy-ticket"}>
+                                <button type="button">Buy Tickets</button>
+                            </NavLink>
                         </div>
                     </div>
                 </div>

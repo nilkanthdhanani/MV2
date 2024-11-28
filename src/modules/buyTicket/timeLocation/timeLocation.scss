@@ -1,0 +1,105 @@
+@import "../../../styles/index.scss";
+
+.time-location {
+    padding: 60px;
+
+    @media (max-width: 576px) {
+        padding: 40px 0;
+    }
+
+    .time-location-head {
+        margin-bottom: 50px;
+
+        h2 {
+            @include font24;
+            font-family: var(--font-family-open);
+            color: var(--color-black);
+            margin-bottom: 15px;
+        }
+
+        p {
+            @include fontNav;
+            color: var(--font-black-light);
+        }
+    }
+
+    .time-ticket-head {
+        h2 {
+            @include font24;
+            font-family: var(--font-family-open);
+            color: var(--color-black);
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-gray);
+        }
+
+        .time-ticket-grid {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-gray);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            
+            @media (max-width: 768px) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .time-ticket-grid1 {
+                border-right: 1px solid var(--border-gray);
+                padding-right: 30px;
+
+                @media (max-width: 768px) {
+                    border-right: none;
+                    padding-right: 0;
+                    padding-bottom: 30px;
+                }
+
+                p {
+                    @include font14Light;
+                    color: var(--font-black-light);
+
+                    @media (max-width: 768px) {
+                        max-width: 450px;
+                    }
+                }
+
+                h3 {
+                    @include font20;
+                    font-family: var(--font-family-open);
+                    color: var(--color-black);
+                    margin-bottom: 15px;
+                }
+            }
+
+            .time-ticket-grid2 {
+                padding-left: 30px;
+
+                @media (max-width: 768px) {
+                    padding-left: 0;
+                }
+
+                p {
+                    @include font14Light;
+                    color: var(--font-black-light);
+                }
+
+                h3 {
+                    @include font20;
+                    font-family: var(--font-family-open);
+                    color: var(--color-black);
+                }
+                
+                span {
+                    display: block;
+                    @include font14Light;
+                    color: var(--font-black-light);
+                    margin: 5px 0 15px 0;
+                }
+            }
+        }
+
+        .time-ticket-button {
+            margin-top: 20px;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}

@@ -1,0 +1,63 @@
+@import "../../styles/index.scss";
+
+.location {
+    padding-top: 200px;
+    background-image: url("../../assets/images/webp/learnBg.webp");
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+
+    @media (max-width: 576px) {
+        padding-top: 150px;
+    }
+
+    .location-div {
+        padding: 60px;
+        background-color: var(--bg-purpul);
+        max-width: 600px;
+        margin-bottom: -60px;
+        position: relative;
+
+        @media (max-width: 1024px) {
+            padding: 40px 30px;
+            margin-bottom: -100px;
+            max-width: 400px;
+        }
+
+        @media (max-width: 576px) {
+            padding: 20px;
+            margin-bottom: -60px;
+            max-width: 300px;
+        }
+
+        h2 {
+            @include font40Light;
+            color: var(--color-white);
+            margin-bottom: 20px;
+
+            @media (max-width: 576px) {
+                font-size: 30px;
+                line-height: 40px;
+            }
+        }
+
+        p {
+            @include font20;
+            color: var(--color-white);
+
+            @media (max-width: 576px) {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    }
+
+    .location-map {
+        iframe {
+            display: block;
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+    }
+}

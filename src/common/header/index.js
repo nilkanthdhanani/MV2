@@ -66,7 +66,7 @@ export default function Header() {
           </div>
         </div>
         <div className="get-ticket">
-          <NavLink>Get Ticket</NavLink>
+          <NavLink to={"/info"}>Get Ticket</NavLink>
         </div>
         <div className="menu-icon" ref={menuIconRef}>
           <label>

@@ -41,7 +41,7 @@
     }
 }
 
-.submit-btn {
+.submit-btn, .time-ticket-button {
     button {
         padding: 10px 100px;
         background-color: var(--bg-purpul);
@@ -107,7 +107,7 @@
     }
 }
 
-.tickets-div2-content {
+.tickets-div2-content, .buy-tck-btn {
     button {
         padding: 10px 25px;
         border: 1px solid var(--color-white);

@@ -5,6 +5,8 @@ import Error from "../error";
 import Agenda from "../modules/agenda";
 import Speakers from "../modules/speakers";
 import Info from "../modules/info";
+import Location from "../modules/location";
+import BuyTicket from "../modules/buyTicket";
 
 const router = createBrowserRouter([
     {
@@ -26,6 +28,14 @@ const router = createBrowserRouter([
             {
                 path: "/info",
                 element: <Info />
+            },
+            {
+                path: "/location",
+                element: <Location />
+            },
+            {
+                path: "/buy-ticket",
+                element: <BuyTicket />
             },
         ]
     },
