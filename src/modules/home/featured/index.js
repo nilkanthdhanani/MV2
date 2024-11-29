@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './featured.scss';
 
 import profileBg from '../../../assets/videos/profileBg.mp4';
 import { NavLink } from 'react-router-dom';
 import { speaker1, speaker2 } from '../../../assets/images/images';
+import Aos from 'aos';
 
 export default function Featured() {
+    useEffect(() => {
+        Aos.init({
+          duration: 1000,
+          once: false,
+        });
+        Aos.refresh();
+    }, []);
+
     return (
         <section className='featured'>
             <div className="container">
@@ -22,7 +31,7 @@ export default function Featured() {
                             </div>
                         </div>
                         <div className="featured-grid-div3">
-                            <div className="featured-grid-image">
+                            <div className="featured-grid-image" data-aos="fade-up">
                                 <img src={speaker1} alt="speaker1" />
                             </div>
                         </div>
@@ -50,7 +59,7 @@ export default function Featured() {
                             </div>
                         </div>
                         <div className="featured-grid-div3">
-                            <div className="featured-grid-image">
+                            <div className="featured-grid-image" data-aos="fade-up">
                                 <img src={speaker2} alt="speaker2" />
                             </div>
                         </div>

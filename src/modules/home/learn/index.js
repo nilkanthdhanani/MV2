@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import "./learn.scss";
 
 import learnVideo from '../../../assets/videos/learnVideo.mp4';
 import { NavLink } from 'react-router-dom';
+import Aos from 'aos';
 
 export default function Learn() {
+    useEffect(() => {
+        Aos.init({
+          duration: 1000,
+          once: false,
+        });
+        Aos.refresh();
+    }, []);
+
     return (
         <section className='learn'>
             <div className='learn-div'>
@@ -19,7 +28,7 @@ export default function Learn() {
                                 </NavLink>
                             </div>
                         </div>
-                        <div className="learn-inspired-video">
+                        <div className="learn-inspired-video" data-aos="fade-up">
                             <video src={learnVideo} autoPlay loop muted></video>
                         </div>
                     </div>

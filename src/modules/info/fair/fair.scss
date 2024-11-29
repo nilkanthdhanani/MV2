@@ -34,9 +34,11 @@
 
         .fair-image {
             max-width: 900px;
-            margin: 150px auto 0 auto;
+            margin: 0 auto;
+            padding-top: 150px;
             display: grid;
             grid-template-columns: 25% 1fr;
+            overflow: hidden;
 
             @media (max-width: 768px) {
                 grid-template-columns: 1fr;
@@ -49,6 +51,7 @@
 
             .fair-image1 {
                 position: relative;
+                z-index: 2;
 
                 @media (max-width: 768px) {
                     display: flex;

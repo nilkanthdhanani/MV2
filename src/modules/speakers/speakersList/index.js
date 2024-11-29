@@ -7,6 +7,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 import FacebookIco from '../../../assets/images/svg/facebook';
 import InstagramIco from '../../../assets/images/svg/instagram';
 import TwitterIco from '../../../assets/images/svg/twitter';
+import Aos from 'aos';
 
 const speakers = [
     {
@@ -88,6 +89,14 @@ export default function SpeakersList() {
         }
     }, [location]);
 
+    useEffect(() => {
+        Aos.init({
+          duration: 1000,
+          once: false,
+        });
+        Aos.refresh();
+    }, []);
+
     return (
         <section>
             {speakers.map((speaker, index) => (
@@ -97,7 +106,7 @@ export default function SpeakersList() {
                     </div>
                     <div className="speakers-div">
                         <div className="speakers-div-main">
-                            <div className="speakers-div-image">
+                            <div className="speakers-div-image" data-aos="fade-up">
                                 <img src={speaker.image} alt={speaker.name} />
                             </div>
                             <div className="speakers-div-content">

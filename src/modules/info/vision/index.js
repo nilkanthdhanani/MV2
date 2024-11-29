@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './vision.scss';
 import { NavLink } from 'react-router-dom';
 import { infoImg1 } from '../../../assets/images/images';
+import Aos from 'aos';
 
 export default function Vision() {
+    useEffect(() => {
+        Aos.init({
+          duration: 1000,
+          once: false,
+        });
+        Aos.refresh();
+    }, []);
+
     return (
         <section className='vision'>
             <div className="container">
@@ -32,7 +41,7 @@ export default function Vision() {
                         </div>
                     </div>
                 </div>
-                <div className="visio-img">
+                <div className="visio-img" data-aos="fade-up">
                     <img src={infoImg1} alt="Our Location" />
                 </div>
             </div>
